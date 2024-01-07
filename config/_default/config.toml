@@ -1,0 +1,12 @@
+baseURL = "https://dev.lasthop.xyz/"
+languageCode = 'en-us'
+title = 'LastHop'
+theme = "hugo-theme-stack"
+
+[author]
+name = "Prabhath"
+bio = ""
+profilePicture = "img/dp.png"
+
+[params.social]
+github = "https://github.com/pvlab373"
