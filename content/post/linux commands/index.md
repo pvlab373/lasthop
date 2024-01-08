@@ -1,5 +1,5 @@
 ---
-title: Linux commands for network engineers
+title: Essential Linux commands for network engineers
 date: 2023-12-20
 description: Essential Linux commands
 draft: false
@@ -11,7 +11,8 @@ categories:
 image: linux.png
 ---
 
-**ls**: 
+## **ls**:
+
 Lists directories and files in the current directory.  
 Example:  
 
@@ -19,14 +20,16 @@ Example:
     clab     docker-compose  downloads  hugo     package-lock.json  scripts
     compose  docker-vol      service    lasthop  powerlevel10k      tf
 
-**pwd**:
+## **pwd**:
+
 Prints the current working directory.  
 Example:
 
     ubuntu@panda:~$ pwd
     /home/ubuntu
 
-**cd**:
+## **cd**:
+
 Navigate through directories.  
 Example:
 
@@ -34,7 +37,8 @@ Example:
     ubuntu@panda:~/clab$ cd
     ubuntu@panda:~$ 
 
-**mkdir**:
+## **mkdir**:
+
 Create directories.  
 Example:
 
@@ -43,7 +47,8 @@ Example:
     clab     docker-compose  downloads  hugo     newdir             powerlevel10k  tf
     compose  docker-vol      service    lasthop  package-lock.json  scripts
 
-**mv**:
+## **mv**:
+
 Move or rename files.  
 Example:
 
@@ -52,7 +57,8 @@ Example:
     clab     docker-compose  downloads_backup  hugo     package-lock.json  scripts
     compose  docker-vol      service           lasthop  powerlevel10k      tf
 
-**cp**:
+## **cp**:
+
 Copy files.  
 Example:
 
@@ -61,7 +67,8 @@ Example:
     clab     docker-compose  downloads  hugo     package-lock-backup.json  package-lock.json  powerlevel10k  scripts
     compose  docker-vol      service    lasthop  tf
 
-**rm**:
+## **rm**:
+
 Delete files or directories.  
 Example:
 
@@ -70,7 +77,8 @@ Example:
     clab     docker-compose  downloads  hugo     package-lock.json  powerlevel10k  scripts
     compose  docker-vol      service    lasthop  tf
 
-**touch**:
+## **touch**:
+
 Create blank/empty files.  
 Example:
 
@@ -80,101 +88,117 @@ Example:
     compose  docker-vol      service    lasthop  tf
 
 
-**cat**:
+## **cat**:
+
 Display file contents on the terminal.  
 Example:
 
     ubuntu@panda:~$ cat newfile.txt 
     hello world
 
-**clear**:
+## **clear**:
+
 Clear the terminal display.  
 Example:
 
     ubuntu@panda:~$ clear
 
-**echo**:
+## **echo**:
+
 Print any text that follows the command.  
 Example:
 
     ubuntu@panda:~$ echo "hello world"
     hello world
 
-**less**:
+## **less**:
+
 Display paged outputs in the terminal.  
 Example:
 
     ubuntu@panda:~$ less package-lock.json
 
-**man**:
+## **man**:
+
 Access manual pages for Linux commands.  
 Example:
 
     ubuntu@panda:~$ man ls
 
-**uname**:
+## **uname**:
+
 Get basic information about the OS.  
 Example:
 
     ubuntu@panda:~$ uname -a
     Linux panda 5.15.0-1049-oracle
 
-**whoami**:
+## **whoami**:
+
 Get the active username.  
 Example:
 
     ubuntu@panda:~$ whoami
     ubuntu
 
-**tar**:
+## **tar**:
+
 Extract and compress files.  
 Example:
 
     ubuntu@panda:~$ tar -xvf archive.tar
 
-**grep**:
+## **grep**:
+
 Search for a string within an output.  
 Example:
 
     ubuntu@panda:~$ grep "pattern" filename
 
-**head**:
+## **head**:
+
 Return the specified number of lines from the top.  
 Example:
 
     ubuntu@panda:~$ head -n 5 filename
 
-**tail**:
+## **tail**:
+
 Return the specified number of lines from the bottom.  
 Example:
 
     ubuntu@panda:~$ tail -n 5 filename
 
-**diff**:
+## **diff**:
+
 Find the difference between two files.  
 Example:
 
     ubuntu@panda:~$ diff file1 file2
 
-**cmp**:
+## **cmp**:
+
 Check if two files are identical.  
 Example:
 
     ubuntu@panda:~$ cmp file1 file2
 
-**comm**:
+## **comm**:
+
 Combine the functionality of diff and cmp.  
 Example:
 
     ubuntu@panda:~$ comm file1 file2
 
-**sort**:
+## **sort**:
+
 Sort the content of a file while outputting.  
 Example:
 
     ubuntu@panda:~$ sort filename
 
-**export**:
+## **export**:
+
 Export environment variables.  
 Example:
 
@@ -184,7 +208,8 @@ Example:
 
 
 
-**ps**:
+## **ps**:
+
 Display active processes.  
 Example:
 
@@ -193,14 +218,16 @@ Example:
     1234 pts/1    00:00:01 bash
     5678 pts/1    00:00:03 python
 
-**kill** and **killall**:
+## **kill** and **killall**:
+
 Kill active processes by process ID or name.  
 Example:
 
     ubuntu@panda:~$ kill 1234
     ubuntu@panda:~$ killall python
 
-**df**:
+## **df**:
+
 Display disk filesystem information.  
 Example:
 
@@ -209,7 +236,8 @@ Example:
     /dev/sda1       20G  15G  4.0G  80% /
 
 
-**chmod**:
+## **chmod**:
+
 Change file permissions.  
 Example:
 
@@ -217,7 +245,8 @@ Example:
     ubuntu@panda:~$ ls -l script.sh
     -rwxr-xr-x 1 ubuntu ubuntu 0 Jan  1 12:00 script.sh
 
-**chown**:
+## **chown**:
+
 Grant ownership of files or folders.  
 Example:
 
@@ -225,7 +254,8 @@ Example:
     ubuntu@panda:~$ ls -l script.sh
     -rwxr-xr-x 1 ubuntu ubuntu 0 Jan  1 12:00 script.sh
 
-**ifconfig**:
+## **ifconfig**:
+
 Display network interfaces and IP addresses.  
 Example:
 
@@ -233,13 +263,15 @@ Example:
     eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
             inet 192.168.1.2  netmask 255.255.255.0  broadcast 192.168.1.255
 
-**traceroute**:
+## **traceroute**:
+
 Trace all the network hops to reach the destination.  
 Example:
 
     ubuntu@panda:~$ traceroute google.com
 
-**wget**:
+## **wget**:
+
 Direct download files from the internet.  
 Example:
 
@@ -248,7 +280,8 @@ Example:
 
 
 
-**cal**:
+## **cal**:
+
 View a command-line calendar.  
 Example:
 
@@ -262,7 +295,8 @@ Example:
     23 24 25 26 27 28 29  
     30 31                
 
-**alias**:
+## **alias**:
+
 Create custom shortcuts for regularly used commands.  
 Example:
 
@@ -271,40 +305,40 @@ Example:
     total 4
     drwxrwxr-x 2 ubuntu ubuntu 4096 Jan  1 12:00 clab
 
-**dd**:
-Majorly used for creating bootable USB sticks.  
-Example:
 
-    ubuntu@panda:~$ sudo dd if=/path/to/iso of=/dev/sdb bs=4M status=progress
+## **whereis**:
 
-**whereis**:
 Locate the binary, source, and manual pages for a command.  
 Example:
 
     ubuntu@panda:~$ whereis ls
     ls: /bin/ls /usr/share/man/man1/ls.1.gz
 
-**whatis**:
+## **whatis**:
+
 Find what a command is used for.  
 Example:
 
     ubuntu@panda:~$ whatis ls
     ls (1) - list directory contents
 
-**top**:
+## **top**:
+
 View active processes live with their system usage.  
 Example:
 
     ubuntu@panda:~$ top
 
-**useradd** and **usermod**:
+## **useradd** and **usermod**:
+
 Add new user or change existing users' data.  
 Example:
 
     ubuntu@panda:~$ sudo useradd newuser
     ubuntu@panda:~$ sudo usermod -aG sudo newuser
 
-**passwd**:
+## **passwd**:
+
 Create or update passwords for existing users.  
 Example:
 
@@ -313,41 +347,47 @@ Example:
     Retype new UNIX password: 
     passwd: password updated successfully
 
-**ls -1 | wc -l**:
+## **ls -1 | wc -l**:
+
 Get the count of the files present in a directory.  
 Example:
 
     ubuntu@panda:~$ ls -1 | wc -l
     12
 
-**kill**:
+## **kill**:
+
 Command to kill a process (PID).  
 Example:
 
     ubuntu@panda:~$ kill 1234
 
-**w**:
+## **w**:
+
 Check how many users are logged into Linux.  
 Example:
 
     ubuntu@panda:~$ w
      12:00:00 up 10 days,  2:00,  2 users,  load average: 0.00, 0.01, 0.05
 
-**date**:
+## **date**:
+
 Used to check the current date and time in Linux.  
 Example:
 
     ubuntu@panda:~$ date
     Sat Jan  1 12:00:00 UTC 2023
 
-**ls -a**:
+## **ls -a**:
+
 List the hidden files in a directory.  
 Example:
 
     ubuntu@panda:~$ ls -a
     .  ..  .hiddenfile  clab  downloads
 
-**ls -l**:
+## **ls -l**:
+
 Check the permissions on all the files.  
 Example:
 
@@ -355,7 +395,8 @@ Example:
     total 4
     drwxrwxr-x 2 ubuntu ubuntu 4096 Jan  1 12:00 clab
 
-**ls -R**:
+## **ls -R**:
+
 List information about files and directories within the file system.  
 Example:
 
@@ -369,10 +410,11 @@ Example:
     ./downloads:
     file3  file4
 
-**rm -rf**:
+## **rm -rf**:
+
 Remove directory with the files.  
 Example:
 
-    ubuntu@panda:~$ rm -rf old_directory
+    ubuntu@panda:~$ rm -rf testdir
     ubuntu@panda:~$ ls
     clab  downloads
